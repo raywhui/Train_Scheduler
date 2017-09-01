@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js'></script>
+</head>
+<body>
+
+<script type="text/javascript">
+var freq = 20;
+
+var time = '24:00';
+
+//Convert time. Pushed back one day to prevent negative difference
+var timeConverted = moment(time,'HH:mm').subtract(1, "day");
+console.log(timeConverted);
+
+//Current time
+var currentTime = moment();
+console.log('Current Time: ' + moment().format('HH:mm'));
+
+//Time difference in minutes from inital time to now
+var timeDif = moment().diff(timeConverted, 'minutes');
+console.log('Time Dif: ' + timeDif);
+
+//Time frequency compared to time difference. Train arrival must occur when remainder is 0, so when freq - remainder gives time remaining.
+var timeRemaining = freq - (timeDif % freq);
+console.log('Time remaining: ' + timeRemaining);
+
+//Til next train. Remainder + current time = next train arrival.
+var nextTrain = moment().add(timeRemaining, 'm');
+console.log('Next time on Steam Train: ' + moment(nextTrain).format('HH:mm'));
+
+
+</script>
+
+</body>
+</html>
