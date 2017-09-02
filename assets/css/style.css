@@ -1,0 +1,29 @@
+
+.jumbotron{
+	color:white;
+	text-align: center;
+	background-color: #663300;
+
+}
+
+.input-group{
+	width:100%;
+}
+
+.edit{
+	margin-top: 10px;
+  width: 15px;
+  height: 5px;
+  background-color: black;
+}
+
+.edit:hover{
+	/*animation: fadeout 1s;*/
+	opacity:0.5;
+}
+
+/*@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0.5; }
+}
+*/

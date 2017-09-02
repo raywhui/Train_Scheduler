@@ -3,6 +3,9 @@
 <head>
 	<title>Train Scheduler</title>
 
+		<link href="./assets/css/reset.css">
+
+
 	<!--jQuery CDN-->
 	<script
   src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -13,14 +16,12 @@
   <!--moment.js-->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js'></script>
 
-	<script src='./assets/javascript/script.js'></script>
 
-	<link href="./assets/css/reset.css">
 
 	<!--Bootstrap CDN-->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link href="./assets/css/style.css">
+	  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 </head>
 <body>
@@ -33,17 +34,20 @@
 
 		<div class="panel panel-primary">
 		  <!-- Default panel contents -->
-		  <div class="panel-heading">Cuurent Train Schedule</div>
+		  <div class="panel-heading">Current Train Schedule</div>
 
 		  <!-- Table -->
 		  <table class="table">
 		      <thead>
 			      <tr>
+			      	<th>Delete Entry</th>
 			        <th>Train Name</th>
 			        <th>Destination</th>
+			        <th>First Arrival</th>
 			        <th>Frequency (min)</th>
 			        <th>Next Arrival</th>
 			        <th>Minutes Away</th>
+			        <th>Edit</th>
 			      </tr>
 			    </thead>
 			    <tbody class='add-more-trains'>
@@ -98,6 +102,8 @@
 		</div>
 	
 	</div>
+
+<script src='./assets/javascript/script.js'></script>
 
 </body>
 </html>
